@@ -1,0 +1,31 @@
+.shapeDividerTop,
+.shapeDividerBottom {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	z-index: 9;
+}
+
+.shapeDividerTop {
+	top: 0;
+}
+
+.shapeDividerBottom {
+	bottom: 0;
+	transform: rotate(180deg);
+}
+
+.dark,
+.light {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 150px;
+	fill: var(--background-dark);
+}
+
+.light {
+	fill: var(--background-light);
+}

@@ -1,0 +1,40 @@
+.header {
+	background-color: var(--background-dark);
+	padding-block: var(--s0);
+	color: var(--text-light);
+}
+
+.headerWrap {
+	composes: wrap from "./Wrap.module.css";
+}
+
+.headerLogo {
+	color: var(--text-light);
+}
+
+.hamburger:focus {
+	outline: none;
+}
+
+.desktopNav {
+	display: none;
+}
+
+.desktopNav a {
+	color: var(--text-light);
+}
+
+.hamburger {
+	display: flex;
+	z-index: 9;
+}
+
+@media (min-width: 550px) {
+	.hamburger {
+		display: none;
+	}
+
+	.desktopNav {
+		display: block;
+	}
+}
