@@ -7,10 +7,14 @@ import Underline from "../components/Underline"
 import bio1 from "../public/img/8.jpg"
 import bio2 from "../public/img/3.jpg"
 import Image from "next/image"
+import ReactPlayer from "react-player"
+import ClientOnly from "../components/ClientOnly"
+import thumb from "../public/img/34.jpg"
 
 const Bio = (props) => {
+	console.log(thumb)
 	return (
-		<Region>
+		<>
 			<div className={styles.bioBackgroundLight}>
 				<Wrapper>
 					<div className={styles.bioSwitcher}>
@@ -93,12 +97,19 @@ const Bio = (props) => {
 							</ul>
 						</div>
 					</div>
-					<Region>
-						<div className={styles.bioVideo}></div>
-					</Region>
+					{/* <Region> */}
+					<ClientOnly>
+						<div className={styles.bioVideo}>
+							<ReactPlayer
+								url={props.videoUrl}
+								light={thumb.src}
+							/>
+						</div>
+					</ClientOnly>
+					{/* </Region> */}
 				</Wrapper>
 			</div>
-		</Region>
+		</>
 	)
 }
 

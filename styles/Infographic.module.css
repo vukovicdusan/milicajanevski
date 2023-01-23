@@ -1,0 +1,28 @@
+.infographicBackground {
+	background-image: url("../public/img/traka.jpg");
+	background-position: center;
+	background-repeat: repeat;
+	background-size: auto;
+	position: relative;
+	padding-block-start: 5rem;
+}
+
+.infographicBackground::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	inline-size: 100%;
+	block-size: 100%;
+	backdrop-filter: sepia(90%) blur(15px);
+
+	opacity: 0.5;
+}
+
+.infographicTitle {
+	composes: center from "../styles/Center.module.css";
+}
+
+.infographicMain {
+	display: flex;
+	flex-direction: column;
+}

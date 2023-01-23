@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Bio from "../components/Bio"
 import Hero from "../components/Hero"
+import Infographic from "../components/Infographic"
 
 export default function Home({ videoUrl }) {
 	return (
@@ -19,6 +20,7 @@ export default function Home({ videoUrl }) {
 			</Head>
 			<Hero></Hero>
 			<Bio videoUrl={videoUrl}></Bio>
+			<Infographic></Infographic>
 		</>
 	)
 }

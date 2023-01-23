@@ -1,0 +1,14 @@
+.infographicGrid {
+	display: grid;
+	grid-template-columns: 1fr 2rem 1fr;
+}
+
+.infoYear {
+	grid-column: 1 / 2;
+}
+.filmIcon {
+	grid-column: 2 / 3;
+}
+.infoBox {
+	grid-column: 3 / 4;
+}
