@@ -1,7 +1,8 @@
 import Head from "next/head"
+import Bio from "../components/Bio"
 import Hero from "../components/Hero"
 
-export default function Home() {
+export default function Home({ videoUrl }) {
 	return (
 		<>
 			<Head>
@@ -17,6 +18,12 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Hero></Hero>
+			<Bio videoUrl={videoUrl}></Bio>
 		</>
 	)
+}
+
+export const getStaticProps = async () => {
+	let videoUrl = "https://vimeo.com/505821384"
+	return { props: { videoUrl } }
 }

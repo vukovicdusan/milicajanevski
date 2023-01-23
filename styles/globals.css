@@ -23,7 +23,7 @@
 
 	--primary: #7a81e2;
 	--secondary: #aa51aa;
-	--text-dark: #000000;
+	--text-dark: #7a7a7a;
 	--text-light: #f8f8ff;
 	--text-gray: #bcbcbc;
 	--background-dark: #121212;
@@ -80,7 +80,7 @@ body {
 	min-height: 100vh;
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;
-	font-size: var(--s0);
+	font-size: var(--s1);
 	background-color: var(--background-light);
 }
 
@@ -351,7 +351,7 @@ select:-webkit-autofill:focus {
 }
 
 .bold {
-	font-family: var(--poppins-bold);
+	font-family: var(--font-bold);
 }
 
 .sr-only {

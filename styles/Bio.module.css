@@ -1,0 +1,50 @@
+.bioBackgroundLight {
+	background-color: var(--background-light);
+}
+
+.bioBackgroundDark {
+	background-color: var(--background-dark);
+	color: var(--text-light);
+	position: relative;
+	padding-block-start: 10rem;
+}
+
+.bioSwitcher {
+	composes: switcher from "../styles/Switcher.module.css";
+}
+
+.bioStack,
+.bioStack2,
+.workshopStack {
+	composes: stack from "../styles/Stack.module.css";
+}
+
+.bioStack > * + *,
+.bioStack2 > * + * {
+	--stack-space: var(--s4);
+}
+
+.bioStack2 {
+	--stack-align: flex-end;
+	text-align: end;
+}
+
+.imgContainer {
+	max-width: 420px;
+	transform: translateY(8rem);
+	z-index: 9;
+	border-style: solid;
+	border-width: 10px;
+	border-color: rgba(0, 0, 0, 0.1);
+	border-image: url("../public/img/radient-150x150.png");
+	border-image-slice: 10;
+}
+
+.imgContainer2 {
+	composes: imgContainer;
+	transform: translateY(-8rem);
+}
+
+.bioImage {
+	object-fit: contain;
+}

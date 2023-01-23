@@ -1,0 +1,16 @@
+.underlineContainerStart,
+.underlineContainerEnd {
+	display: flex;
+}
+
+.underlineContainerEnd {
+	justify-content: flex-end;
+}
+
+.underline {
+	display: block;
+	width: 8rem;
+	height: 3px;
+	background-color: var(--primary);
+	margin-block: var(--s1);
+}

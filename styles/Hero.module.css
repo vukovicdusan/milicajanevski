@@ -1,7 +1,7 @@
 .heroBackground {
 	background-color: var(--background-dark);
 	position: relative;
-	/* block-size: 110vh; */
+	overflow: hidden;
 }
 
 .container {
@@ -9,31 +9,6 @@
 	grid-template-columns: 1fr 650px 1fr;
 	grid-template-rows: 1fr;
 }
-
-/* .bckgImage {
-	background-image: url("../public/img/home2_1000px-740x1024.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	inline-size: 650px;
-	block-size: 850px;
-	z-index: 0;
-	grid-column: 2 / 3;
-	grid-row: 1;
-}
-
-.bckgOverlay {
-	position: relative;
-	background-image: url("../public/img/okvir.png");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	inline-size: 650px;
-	block-size: 850px;
-	z-index: 1;
-	grid-column: 2 / 3;
-	grid-row: 1;
-} */
 
 .bckgImage,
 .bckgOverlay {
@@ -44,21 +19,6 @@
 	max-block-size: 850px;
 	position: relative;
 }
-
-/* .heroTitle {
-	font-family: var(--font-regular);
-	color: #eeeeeeba;
-	writing-mode: vertical-rl;
-	vertical-align: baseline;
-	letter-spacing: 12px;
-	text-transform: uppercase;
-	font-size: var(--s3);
-	transform: rotateZ(180deg);
-	z-index: 1;
-	grid-column: 2 / 3;
-	grid-row: 1;
-	margin: 0 0 1rem 1.5rem;
-} */
 
 .spacer {
 	block-size: 10rem;
