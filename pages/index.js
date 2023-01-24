@@ -2,6 +2,7 @@ import Head from "next/head"
 import Bio from "../components/Bio"
 import Hero from "../components/Hero"
 import Infographic from "../components/Infographic"
+import Theater from "../components/Theater"
 
 export default function Home({ videoUrl }) {
 	return (
@@ -21,6 +22,7 @@ export default function Home({ videoUrl }) {
 			<Hero></Hero>
 			<Bio videoUrl={videoUrl}></Bio>
 			<Infographic></Infographic>
+			<Theater></Theater>
 		</>
 	)
 }

@@ -13,6 +13,7 @@ const Hero = () => {
 		const handleScroll = () => {
 			const positionY = ref.current.getBoundingClientRect().top
 			ref.current.style.transform = `translateY(${-positionY * 0.7}px)`
+			console.log(positionY)
 		}
 		window.addEventListener("scroll", handleScroll)
 		return () => window.removeEventListener("scroll", handleScroll)

@@ -1,14 +1,152 @@
-.infographicGrid {
+.infographicGrid,
+.infographicGridLeft {
 	display: grid;
-	grid-template-columns: 1fr 2rem 1fr;
+	grid-template-columns: 1fr 3rem 1fr;
+	align-items: center;
 }
 
 .infoYear {
 	grid-column: 1 / 2;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-inline-end: 2rem;
+	color: var(--background-dark);
 }
+
+.infographicGridLeft .infoYear {
+	grid-column: 3 / 4;
+	grid-row: 1;
+	justify-content: flex-start;
+	margin-inline-start: 2rem;
+}
+
 .filmIcon {
 	grid-column: 2 / 3;
+	grid-row: 1;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	margin-inline-end: 2px;
 }
+
+.filmIcon::before {
+	content: "";
+	position: absolute;
+	width: 2.5rem;
+	height: 2.5rem;
+	border: 2px solid var(--secondary);
+	border-radius: 100px;
+	background-color: var(--primary);
+	top: -7px;
+	left: 2px;
+	z-index: -1;
+}
+
+.filmIcon svg {
+	display: block;
+}
+
 .infoBox {
+	position: relative;
+	composes: stack from "../styles/Stack.module.css";
 	grid-column: 3 / 4;
+	max-inline-size: 30vw;
+	background-color: var(--background-dark);
+	border-inline-start: 3px solid var(--primary);
+	border-radius: 8px;
+	padding: 1.5rem 1rem;
+	margin-inline-start: 2rem;
+	z-index: 1;
+	color: var(--text-light);
+	word-break: break-word;
+}
+
+.infoBox h6 {
+	color: var(--primary);
+}
+
+.infoBox::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 9px 9px 9px 0;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-left: -9px;
+	border-color: transparent;
+	border-inline-end-color: var(--primary);
+}
+
+.infographicGridLeft .infoBox {
+	grid-column: 1 / 2;
+	grid-row: 1;
+	margin-inline-end: 2rem;
+	border-inline-start: none;
+	border-inline-end: 3px solid var(--primary);
+}
+
+.infographicGridLeft .infoBox::before {
+	right: 0;
+	left: auto;
+	right: 0;
+	margin-left: 0;
+	margin-right: -9px;
+	transform: rotate(180deg) translateY(50%);
+}
+
+@media (max-width: 600px) {
+	.infographicGrid,
+	.infographicGridLeft {
+		display: grid;
+		grid-template-columns: 3rem 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		align-items: center;
+	}
+	.infoYear,
+	.infographicGridLeft .infoYear {
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+		justify-content: flex-start;
+		margin-inline-end: 0;
+	}
+
+	.filmIcon {
+		grid-column: 1 / 2;
+		grid-row: 3 / 4;
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+		margin-inline-end: 2px;
+	}
+
+	.infoBox,
+	.infographicGridLeft .infoBox {
+		grid-column: 2 / 4;
+		grid-row: 2 / 5;
+		max-inline-size: 100%;
+		margin-inline-end: 0;
+		margin-inline-start: 0.5rem;
+		border-inline-start: 3px solid var(--primary);
+		border-inline-end: none;
+	}
+
+	.infographicGridLeft .infoYear {
+		margin-inline-start: 0;
+	}
+
+	.infographicGridLeft .infoBox::before {
+		right: 0;
+		left: 0;
+		right: 0;
+		margin-left: -9px;
+		margin-right: 0;
+		transform: rotate(0) translateY(-50%);
+	}
 }

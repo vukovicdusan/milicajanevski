@@ -12,7 +12,6 @@ import ClientOnly from "../components/ClientOnly"
 import thumb from "../public/img/34.jpg"
 
 const Bio = (props) => {
-	console.log(thumb)
 	return (
 		<>
 			<div className={styles.bioBackgroundLight}>
@@ -42,9 +41,9 @@ const Bio = (props) => {
 						</div>
 						<div className={styles.imgContainer}>
 							<Image
-								// width={600}
-								// height={500}
-								// fill
+								// width={450}
+								// height={450}
+								fill
 								className={styles.bioImage}
 								src={bio1}
 								alt="bio image"
@@ -62,9 +61,7 @@ const Bio = (props) => {
 					<div className={styles.bioSwitcher}>
 						<div className={styles.imgContainer2}>
 							<Image
-								// width={600}
-								// height={500}
-								// fill
+								fill
 								className={styles.bioImage}
 								src={bio2}
 								alt="bio image"
@@ -97,16 +94,16 @@ const Bio = (props) => {
 							</ul>
 						</div>
 					</div>
-					{/* <Region> */}
 					<ClientOnly>
 						<div className={styles.bioVideo}>
 							<ReactPlayer
 								url={props.videoUrl}
 								light={thumb.src}
+								width="100%"
+								height="100%"
 							/>
 						</div>
 					</ClientOnly>
-					{/* </Region> */}
 				</Wrapper>
 			</div>
 		</>

@@ -2,7 +2,7 @@
 	background-image: url("../public/img/traka.jpg");
 	background-position: center;
 	background-repeat: repeat;
-	background-size: auto;
+	background-size: cover;
 	position: relative;
 	padding-block-start: 5rem;
 }
@@ -14,15 +14,58 @@
 	inline-size: 100%;
 	block-size: 100%;
 	backdrop-filter: sepia(90%) blur(15px);
-
 	opacity: 0.5;
 }
 
 .infographicTitle {
 	composes: center from "../styles/Center.module.css";
+	color: var(--secondary);
+	text-transform: uppercase;
 }
 
 .infographicMain {
 	display: flex;
 	flex-direction: column;
+	position: relative;
+	gap: 1rem;
+}
+
+.infographicMain::before,
+.infographicMain::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	border-radius: 50%;
+	position: absolute;
+	left: calc(50% - 12px);
+	z-index: 9;
+	background-color: var(--primary);
+}
+
+.infographicMain::after {
+	bottom: 0;
+}
+
+.infographicMainLine {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 4px;
+	left: 50%;
+	top: 0;
+	bottom: 0;
+	margin-left: -4px;
+	background-color: var(--primary);
+}
+
+@media (max-width: 600px) {
+	.infographicMainLine {
+		left: 25px;
+	}
+
+	.infographicMain::before,
+	.infographicMain::after {
+		left: 13px;
+	}
 }
