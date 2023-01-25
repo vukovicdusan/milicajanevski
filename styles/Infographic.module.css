@@ -28,6 +28,7 @@
 	flex-direction: column;
 	position: relative;
 	gap: 1rem;
+	margin-block-start: 4rem;
 }
 
 .infographicMain::before,

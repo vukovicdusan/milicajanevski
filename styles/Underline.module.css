@@ -7,10 +7,15 @@
 	justify-content: flex-end;
 }
 
-.underline {
+.underlinePrimary,
+.underlineSecondary {
 	display: block;
 	width: 8rem;
 	height: 3px;
 	background-color: var(--primary);
 	margin-block: var(--s1);
+}
+
+.underlineSecondary {
+	background-color: var(--secondary);
 }

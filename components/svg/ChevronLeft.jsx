@@ -1,17 +1,14 @@
-import * as React from "react";
+import * as React from "react"
 
 const ChevronLeft = (props) => (
 	<svg
-		width={props.svgWidth || 24}
-		height={props.svgHeight || 24}
+		fill={props.svgFill || "#aa51aa"}
 		xmlns="http://www.w3.org/2000/svg"
-		fillRule="evenodd"
-		clipRule="evenodd"
-		fill={props.svgFill || "#000"}
-		// {...props}
+		width={24}
+		height={24}
 	>
-		<path d="M20 .755 5.626 12 20 23.219l-.619.781L4 12 19.391 0 20 .755z" />
+		<path d="m16.67 0 2.83 2.829-9.339 9.175 9.339 9.167L16.67 24 4.5 12.004z" />
 	</svg>
-);
+)
 
-export default ChevronLeft;
+export default ChevronLeft

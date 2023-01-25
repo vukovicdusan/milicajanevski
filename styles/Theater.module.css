@@ -1,101 +1,136 @@
+.theaterBackground {
+	background-image: url("../public/img/pozoriste-768x1368.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.theaterBackground::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	inline-size: 100%;
+	block-size: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.theaterTitle {
+	composes: center from "../styles/Center.module.css";
+	color: var(--primary);
+}
+
 .reel {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	block-size: 800px;
 	inline-size: 100%;
 	overflow: hidden;
 	scrollbar-color: #fff #000;
 }
 
+.timeline {
+	position: absolute;
+	display: block;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 4px;
+	width: calc(100vw - 60%);
+	background-color: var(--secondary);
+}
+
 .reelInside {
-	background-color: none;
+	background-color: transparent;
 	display: flex;
-	inline-size: 200vw;
 	transition: all 0.5s ease-in-out;
 	position: relative;
+	margin-left: calc(50% - 50vw);
 }
 
 .reelItem {
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	block-size: 800px;
+	align-items: flex-end;
 	inline-size: 100vw;
 	padding: var(--s1);
+	gap: 1rem;
 }
 
 .reelItemContent {
-	max-inline-size: 40rem;
+	composes: stack from "../styles/Stack.module.css";
 	--stack-justify: center;
 	--stack-align: center;
 }
 
-.reelItemContent > * {
-	--stack-space: var(--s4);
-}
-
-.reelItemBody {
+.reelItemIcon {
+	width: 2.5rem;
+	height: 2.5rem;
+	background-color: var(--primary);
+	border-radius: 100px;
+	position: relative;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	gap: var(--s2);
-}
-.reelItemBody > *:nth-child(1) {
-	flex: 1 1 30%;
-}
-
-.reelItemBody > *:nth-child(2) {
-	flex: 1 1 65%;
-	padding-inline-start: var(--s1);
-	border-inline-start: 1px solid lightslategray;
-}
-
-.reelItemFooter {
-	display: flex;
-	gap: var(--s1);
-}
-
-.reelItemFooter > * {
-	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	flex-basis: 100%;
-	border: 4px solid rgba(8, 61, 119, 0.5);
-	border-radius: 5px;
-	background-color: rgba(0, 0, 0, 0.05);
-	background-size: cover;
-	padding: var(--s2);
-	color: var(--main);
-	font-family: var(--poppinsbold);
-	text-transform: uppercase;
-	text-align: center;
-	background-repeat: no-repeat;
-	background-position: center;
 }
 
-/* .reelItemFooter > *:nth-child(2) {
-	background-image: url("../public/img/brda-chart.png");
+.reelItemYear {
+	color: var(--primary);
+	font-family: var(--font-bold);
 }
-.reelItemFooter > *:nth-child(1) {
-	background-image: url("../public/img/stubovi.png");
+
+.reelItemBox {
+	position: relative;
+	composes: stack from "../styles/Stack.module.css";
+	background-color: var(--background-dark);
+	border-block-start: 3px solid var(--primary);
+	border-radius: 8px;
+	padding: 1.5rem 2rem;
+	z-index: 1;
+	color: var(--text-light);
+	word-break: break-word;
+	font-size: var(--s0);
+	width: 30vw;
+	max-width: 25rem;
+	min-width: 16rem;
+	block-size: 12rem;
+	overflow: auto;
 }
-.reelItemFooter > *:nth-child(3) {
-	background-image: url("../public/img/doline-chart.png");
-} */
+
+.reelItemBox > * {
+	--stack-justify: center;
+	--stack-align: center;
+}
+
+.reelItemBox::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 9px 9px 9px 0;
+	left: 50%;
+	top: -8px;
+	transform: rotate(45deg);
+	margin-left: -9px;
+	border-color: transparent;
+	border-block-start-color: var(--primary);
+}
+
+.reelItemBox > *:nth-child(1) {
+	color: var(--primary);
+}
 
 .reelButtons {
 	display: flex;
 	justify-content: space-between;
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 13%;
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translate(-50%, 50%);
 	width: 70%;
-	/* height: 50px; */
 	z-index: 100;
 }
 
@@ -114,40 +149,8 @@
 	transition: all 0.2s ease;
 }
 
-.reelButton:focus {
-	/* transform: translateY(5px) scale(1.1); */
-}
-
-.reelTop,
-.reelBottom {
-	position: absolute;
-	left: 0;
-	z-index: 90;
-}
-
-.reelTop {
-	top: 0;
-}
-
-.reelBottom {
-	bottom: -15px;
-}
 @media (max-width: 900px) {
 	.reelButtons {
 		width: 100%;
-	}
-}
-
-@media (max-width: 550px) {
-	.reelItemFooter {
-		gap: var(--s-5);
-	}
-
-	.reelItemFooter > * {
-		font-size: var(--s-2);
-	}
-
-	.reelItemBody > *:nth-child(2) {
-		border-inline-start: none;
 	}
 }

@@ -14,7 +14,7 @@ const Infographic = () => {
 				<Wrapper>
 					<div className={styles.infographicTitle}>
 						<h2>Film</h2>
-						<Underline position={"center"}></Underline>
+						<Underline color={"primary"}></Underline>
 					</div>
 					<div className={styles.infographicMain}>
 						<span className={styles.infographicMainLine}></span>

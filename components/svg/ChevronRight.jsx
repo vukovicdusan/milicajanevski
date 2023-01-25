@@ -1,17 +1,14 @@
-import * as React from "react";
+import * as React from "react"
 
 const SvgComponent = (props) => (
 	<svg
-		width={props.svgWidth || 24}
-		height={props.svgHeight || 24}
+		fill={props.svgFill || "#aa51aa"}
 		xmlns="http://www.w3.org/2000/svg"
-		fillRule="evenodd"
-		clipRule="evenodd"
-		fill={props.svgFill || "#000"}
-		// {...props}
+		width={24}
+		height={24}
 	>
-		<path d="M4 .755 18.374 12 4 23.219l.619.781L20 12 4.609 0 4 .755z" />
+		<path d="M7.33 24 4.5 21.171l9.339-9.175L4.5 2.829 7.33 0 19.5 11.996z" />
 	</svg>
-);
+)
 
-export default SvgComponent;
+export default SvgComponent
