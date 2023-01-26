@@ -13,8 +13,8 @@ const Infographic = () => {
 			<Region>
 				<Wrapper>
 					<div className={styles.infographicTitle}>
-						<h2>Film</h2>
-						<Underline color={"primary"}></Underline>
+						<h2 className="section-title">Film</h2>
+						<Underline color={"secondary"}></Underline>
 					</div>
 					<div className={styles.infographicMain}>
 						<span className={styles.infographicMainLine}></span>

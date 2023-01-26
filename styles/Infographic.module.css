@@ -19,8 +19,6 @@
 
 .infographicTitle {
 	composes: center from "../styles/Center.module.css";
-	color: var(--secondary);
-	text-transform: uppercase;
 }
 
 .infographicMain {

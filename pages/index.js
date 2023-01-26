@@ -1,8 +1,10 @@
 import Head from "next/head"
 import Bio from "../components/Bio"
+import GalleryCTA from "../components/GalleryCTA"
 import Hero from "../components/Hero"
 import Infographic from "../components/Infographic"
 import Theater from "../components/Theater"
+import Contact from "../components/Contact"
 
 export default function Home({ videoUrl }) {
 	return (
@@ -23,6 +25,8 @@ export default function Home({ videoUrl }) {
 			<Bio videoUrl={videoUrl}></Bio>
 			<Infographic></Infographic>
 			<Theater></Theater>
+			<GalleryCTA></GalleryCTA>
+			<Contact></Contact>
 		</>
 	)
 }
