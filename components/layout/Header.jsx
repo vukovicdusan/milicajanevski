@@ -3,7 +3,6 @@ import Wrapper from "./Wrapper"
 import * as css from "../../styles/Header.module.css"
 import Link from "next/link"
 
-// import ClientOnly from "../ClientOnly"
 // import MobileMenu from "../MobileMenu"
 // import Loader from "../Loader"
 
@@ -48,10 +47,7 @@ const Header = () => {
 									<Link href={"/"}>Početna</Link>
 								</li>
 								<li>
-									<Link href={"/galery"}>Galerija</Link>
-								</li>
-								<li>
-									<a href="#contact">Kontakt</a>
+									<Link href={"./gallery"}>Galerija</Link>
 								</li>
 							</ul>
 						</nav>

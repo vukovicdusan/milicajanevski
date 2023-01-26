@@ -94,7 +94,7 @@ a {
 	text-decoration-color: var(--primary);
 	text-underline-offset: 1px;
 	text-decoration: none;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	transition: all 0.3s ease;
 }
 
@@ -410,4 +410,8 @@ select:-webkit-autofill:focus {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.pswp__img {
+	cursor: auto !important;
 }
