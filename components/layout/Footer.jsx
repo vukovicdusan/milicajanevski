@@ -3,12 +3,14 @@ import Wrapper from "./Wrapper"
 import * as styles from "../../styles/Footer.module.css"
 
 const Footer = () => {
+	let year = new Date().getFullYear()
 	return (
 		<footer className={styles.footer}>
 			<Wrapper>
 				<p className={styles.footerCenter}>
 					{" "}
-					Copyright © 2023 Milica Janevski | Website by Dušan Vuković{" "}
+					Copyright © {year} Milica Janevski | Website by Dušan
+					Vuković{" "}
 				</p>
 			</Wrapper>
 		</footer>
