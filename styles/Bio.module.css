@@ -31,7 +31,9 @@
 }
 
 .imgContainer {
+	position: relative;
 	aspect-ratio: 2 / 3;
+	width: 400px;
 	max-width: 420px;
 	transform: translateY(8rem);
 	z-index: 9;
@@ -64,12 +66,12 @@
 		align-items: center;
 	}
 	.bioBackgroundDark .bioSwitcher {
-		/* flex-direction: column-reverse; */
+		flex-direction: column-reverse;
 	}
 
 	.imgContainer,
 	.imgContainer2 {
-		width: 40%;
+		max-width: 300px;
 	}
 
 	.imgContainer {
