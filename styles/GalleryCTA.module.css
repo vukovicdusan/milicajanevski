@@ -1,0 +1,78 @@
+.center {
+	composes: center from "../styles/Center.module.css";
+}
+
+.background {
+	background-color: var(--background-dark);
+}
+
+.link {
+	display: contents;
+}
+
+.link:hover .container::before {
+	background-color: transparent;
+}
+
+.container {
+	aspect-ratio: 2 / 3;
+	width: 60%;
+	min-width: 10rem;
+	max-width: 20rem;
+	position: relative;
+}
+
+.container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+	transition: all 0.2s ease;
+}
+
+.overlay img {
+	object-fit: contain;
+}
+
+.withIcon {
+	display: inline-flex;
+	align-items: baseline;
+	align-items: center;
+	font-size: var(--s3);
+	color: var(--text-light);
+	animation: flicker 1.5s infinite alternate;
+	/* transition: text-shadow 0.2s ease-in-out; */
+}
+
+@keyframes flicker {
+	0%,
+	18%,
+	22%,
+	25%,
+	53%,
+	57%,
+	100% {
+		text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff,
+			0 0 40px var(--primary), 0 0 80px var(--primary),
+			0 0 90px var(--primary), 0 0 100px var(--primary),
+			0 0 150px var(--primary);
+	}
+
+	20%,
+	24%,
+	55% {
+		text-shadow: none;
+	}
+}
+
+.icon {
+	fill: var(--primary);
+}
+
+.withIcon .icon {
+	margin-inline-end: 1rem;
+}

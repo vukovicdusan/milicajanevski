@@ -1,4 +1,9 @@
 .footer {
-	background-color: var(--text-secondary);
-	margin-block-start: var(--s4);
+	background-color: var(--primary);
+	color: var(--text-light);
+	font-size: var(--s-2);
+}
+
+.footerCenter {
+	composes: center from "../styles/Center.module.css";
 }

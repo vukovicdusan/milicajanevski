@@ -159,7 +159,7 @@ const Testimonials = () => {
 			<Region>
 				<Wrapper>
 					<div className={styles.theaterTitle}>
-						<h2>Pozorište</h2>
+						<h2 className="section-title">Pozorište</h2>
 						<Underline color={"secondary"}></Underline>
 					</div>
 					<div className={styles.reel}>
@@ -204,6 +204,7 @@ const Testimonials = () => {
 										<div className={styles.reelItemYear}>
 											{play.year}
 										</div>
+										<div className="">{play.theater}</div>
 										<div className={styles.reelItemIcon}>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -223,34 +224,6 @@ const Testimonials = () => {
 									</div>
 								</div>
 							))}
-							{/* <div className={styles.reelItem}>
-							<div className={styles.reelItemContent}>
-							<div className={styles.reelItemYear}>
-							2002.
-							</div>
-							<div className={styles.reelItemIcon}></div>
-							<div className={styles.reelItemBox}>
-							<p>Naslov</p>
-							<p>Uloga: Uloga</p>
-							<p>Režija: Rezija</p>
-							</div>
-							</div>
-						</div> */}
-							{/* <div className={styles.reelItem}>
-								<div className={styles.reelItemContent}>
-								<div className={styles.reelItemYear}>
-										2002.
-									</div>
-									<div className={styles.reelItemIcon}></div>
-									<div className={styles.reelItemBox}>
-										<p>Naslov</p>
-										<p>
-											Uloga: Uloga Uloga Uloga Uloga Uloga
-										</p>
-										<p>Režija: Rezija</p>
-									</div>
-								</div>
-							</div> */}
 						</div>
 					</div>
 				</Wrapper>
