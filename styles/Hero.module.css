@@ -30,7 +30,7 @@
 @media (max-width: 700px) {
 	.bckgImage,
 	.bckgOverlay {
-		inline-size: 85vw;
+		inline-size: 90vw;
 		max-block-size: 45vh;
 	}
 
