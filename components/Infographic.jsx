@@ -20,6 +20,34 @@ const Infographic = () => {
 						<span className={styles.infographicMainLine}></span>
 						<InfographicItem
 							position={"right"}
+							role={"Sanja Maslac"}
+							director={"Bojan Vuletić"}
+							year={"2023"}
+							title={"Pad (serija)"}
+						></InfographicItem>
+						<InfographicItem
+							position={"left"}
+							role={"Maja"}
+							director={"Matija Lukac"}
+							year={"2022"}
+							title={"Polica (kratki film)"}
+						></InfographicItem>
+						<InfographicItem
+							position={"right"}
+							role={"Doplerka"}
+							director={"Igor Đorđević i Maša Nešković"}
+							year={"2022"}
+							title={"Bunar (serija)"}
+						></InfographicItem>
+						<InfographicItem
+							position={"left"}
+							role={"Advokatica Marinković"}
+							director={"Predrag Antonijević"}
+							year={"2022"}
+							title={"Ubice mog oca"}
+						></InfographicItem>
+						<InfographicItem
+							position={"right"}
 							role={"Cveta"}
 							director={"Siniša Cvetić"}
 							year={"2022"}
