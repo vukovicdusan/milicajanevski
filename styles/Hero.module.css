@@ -31,7 +31,7 @@
 	.bckgImage,
 	.bckgOverlay {
 		inline-size: 85vw;
-		max-block-size: 60vh;
+		max-block-size: 45vh;
 	}
 
 	.heroTitle {

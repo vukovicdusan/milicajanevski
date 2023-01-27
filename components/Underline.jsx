@@ -10,7 +10,13 @@ const Underline = (props) => {
 					: styles.underlineContainerEnd
 			}
 		>
-			<div className={styles.underline}></div>
+			<div
+				className={
+					props.color === "primary"
+						? styles.underlinePrimary
+						: styles.underlineSecondary
+				}
+			></div>
 		</div>
 	)
 }

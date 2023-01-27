@@ -1,6 +1,10 @@
 import Head from "next/head"
 import Bio from "../components/Bio"
+import GalleryCTA from "../components/GalleryCTA"
 import Hero from "../components/Hero"
+import Infographic from "../components/Infographic"
+import Theater from "../components/Theater"
+import Contact from "../components/Contact"
 
 export default function Home({ videoUrl }) {
 	return (
@@ -15,10 +19,14 @@ export default function Home({ videoUrl }) {
 					name="viewport"
 					content="width=device-width, initial-scale=1"
 				/>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/favicon.png" />
 			</Head>
 			<Hero></Hero>
 			<Bio videoUrl={videoUrl}></Bio>
+			<Infographic></Infographic>
+			<Theater></Theater>
+			<GalleryCTA></GalleryCTA>
+			<Contact></Contact>
 		</>
 	)
 }

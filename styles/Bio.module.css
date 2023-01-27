@@ -7,6 +7,7 @@
 	color: var(--text-light);
 	position: relative;
 	padding-block-start: 10rem;
+	padding-block-end: 5rem;
 }
 
 .bioSwitcher {
@@ -30,6 +31,9 @@
 }
 
 .imgContainer {
+	position: relative;
+	aspect-ratio: 2 / 3;
+	width: 400px;
 	max-width: 420px;
 	transform: translateY(8rem);
 	z-index: 9;
@@ -46,5 +50,36 @@
 }
 
 .bioImage {
-	object-fit: contain;
+	object-fit: cover;
+}
+
+.bioVideo {
+	margin-block-start: var(--s5);
+	aspect-ratio: 16 / 9;
+	max-width: 640px;
+	max-height: 360px;
+}
+
+@media (max-width: 900px) {
+	.bioSwitcher {
+		justify-content: center;
+		align-items: center;
+	}
+	.bioBackgroundDark .bioSwitcher {
+		flex-direction: column-reverse;
+	}
+
+	.imgContainer,
+	.imgContainer2 {
+		max-width: 300px;
+	}
+
+	.imgContainer {
+		margin-block-start: -4rem;
+	}
+
+	.imgContainer2 {
+		transform: translateY(0);
+		margin-block: 2rem;
+	}
 }

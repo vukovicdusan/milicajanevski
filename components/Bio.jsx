@@ -7,10 +7,13 @@ import Underline from "../components/Underline"
 import bio1 from "../public/img/8.jpg"
 import bio2 from "../public/img/3.jpg"
 import Image from "next/image"
+import ReactPlayer from "react-player"
+import ClientOnly from "../components/ClientOnly"
+import thumb from "../public/img/34.jpg"
 
 const Bio = (props) => {
 	return (
-		<Region>
+		<>
 			<div className={styles.bioBackgroundLight}>
 				<Wrapper>
 					<div className={styles.bioSwitcher}>
@@ -38,12 +41,13 @@ const Bio = (props) => {
 						</div>
 						<div className={styles.imgContainer}>
 							<Image
-								// width={600}
-								// height={500}
-								// fill
+								fill
 								className={styles.bioImage}
 								src={bio1}
 								alt="bio image"
+								sizes="(max-width: 360px) 100vw,
+					(max-width: 900px) 300px,
+					410px"
 							></Image>
 						</div>
 					</div>
@@ -58,12 +62,13 @@ const Bio = (props) => {
 					<div className={styles.bioSwitcher}>
 						<div className={styles.imgContainer2}>
 							<Image
-								// width={600}
-								// height={500}
-								// fill
+								fill
 								className={styles.bioImage}
 								src={bio2}
 								alt="bio image"
+								sizes="(max-width: 360px) 100vw,
+					(max-width: 900px) 300px,
+					410px"
 							></Image>
 						</div>
 						<div className={styles.bioStack2}>
@@ -93,12 +98,19 @@ const Bio = (props) => {
 							</ul>
 						</div>
 					</div>
-					<Region>
-						<div className={styles.bioVideo}></div>
-					</Region>
+					<ClientOnly>
+						<div className={styles.bioVideo}>
+							<ReactPlayer
+								url={props.videoUrl}
+								light={thumb.src}
+								width="100%"
+								height="100%"
+							/>
+						</div>
+					</ClientOnly>
 				</Wrapper>
 			</div>
-		</Region>
+		</>
 	)
 }
 
