@@ -8,33 +8,14 @@
 	composes: wrap from "./Wrap.module.css";
 }
 
-.headerLogo {
-	color: var(--text-light);
-}
-
-.hamburger:focus {
-	outline: none;
-}
-
-.desktopNav {
-	display: none;
-}
-
+.headerLogo,
 .desktopNav a {
 	color: var(--text-light);
 }
 
-.hamburger {
-	display: flex;
-	z-index: 9;
-}
-
-@media (min-width: 550px) {
-	.hamburger {
-		display: none;
-	}
-
-	.desktopNav {
-		display: block;
+@media (max-width: 550px) {
+	.headerWrap {
+		composes: wrap from "./Wrap.module.css";
+		--wrap-justify: center;
 	}
 }

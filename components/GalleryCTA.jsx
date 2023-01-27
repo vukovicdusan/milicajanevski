@@ -38,6 +38,9 @@ const GalleryCTA = () => {
 									src={img}
 									fill
 									alt="img for gallery link"
+									sizes="(max-width: 360px) 50vw,
+					(max-width: 900px) 300px,
+					410px"
 								></Image>
 							</div>
 						</Link>

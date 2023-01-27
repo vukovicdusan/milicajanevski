@@ -7,6 +7,7 @@ import ChevronRight from "./svg/ChevronRight"
 import Wrapper from "./layout/Wrapper"
 import Underline from "./Underline"
 import Region from "./layout/Region"
+import ShapeDivider from "./svg/ShapeDivider"
 
 const plays = [
 	{
@@ -228,6 +229,10 @@ const Testimonials = () => {
 					</div>
 				</Wrapper>
 			</Region>
+			<ShapeDivider
+				position={"bottom"}
+				background={"dark"}
+			></ShapeDivider>
 		</div>
 	)
 }

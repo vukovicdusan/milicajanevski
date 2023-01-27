@@ -1,6 +1,7 @@
 .contactBackground {
 	background-color: var(--background-dark);
 	overflow: hidden;
+	color: var(--background-dark);
 }
 .grid {
 	display: grid;
@@ -34,7 +35,7 @@
 
 .contactStack {
 	composes: stack from "../styles/Stack.module.css";
-	grid-column: 3/4;
+	grid-column: 3/6;
 	grid-row: 1;
 	padding-block: 4rem;
 }
@@ -69,6 +70,14 @@ input:focus + .borderTitle,
 textarea:focus + .borderTitle {
 	font-size: 0.8rem;
 	top: -6px;
+}
+
+.success {
+	color: var(--secondary);
+}
+
+.error {
+	color: indianred;
 }
 
 @media (max-width: 650px) {
