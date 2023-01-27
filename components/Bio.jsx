@@ -16,7 +16,7 @@ const Bio = (props) => {
 		<>
 			<div className={styles.bioBackgroundLight}>
 				<ShapeDivider
-					background={"light"}
+					background={"dark"}
 					position={"top"}
 				></ShapeDivider>
 				<Wrapper>
