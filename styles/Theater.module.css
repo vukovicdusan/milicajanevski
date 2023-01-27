@@ -4,6 +4,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
+	padding-block-end: 10rem;
 }
 
 .theaterBackground::before {

@@ -41,12 +41,13 @@ const Bio = (props) => {
 						</div>
 						<div className={styles.imgContainer}>
 							<Image
-								// width={450}
-								// height={450}
 								fill
 								className={styles.bioImage}
 								src={bio1}
 								alt="bio image"
+								sizes="(max-width: 360px) 100vw,
+					(max-width: 900px) 300px,
+					410px"
 							></Image>
 						</div>
 					</div>
@@ -65,6 +66,9 @@ const Bio = (props) => {
 								className={styles.bioImage}
 								src={bio2}
 								alt="bio image"
+								sizes="(max-width: 360px) 100vw,
+					(max-width: 900px) 300px,
+					410px"
 							></Image>
 						</div>
 						<div className={styles.bioStack2}>

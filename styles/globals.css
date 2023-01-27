@@ -383,9 +383,9 @@ select:-webkit-autofill:focus {
 	appearance: none;
 	display: inline-block;
 	padding: var(--s-3, 0.8rem) var(--s-2, 2.5rem);
-	border: 1px solid var(--primary);
+	border: 2px solid var(--primary);
 	border-radius: 4px;
-	color: var(--text-dark);
+	/* color: var(--text-dark); */
 	background-color: #fff;
 	cursor: pointer;
 	line-height: 1;

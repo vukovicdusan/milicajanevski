@@ -5,6 +5,7 @@
 	background-size: cover;
 	position: relative;
 	padding-block-start: 5rem;
+	background-attachment: fixed;
 }
 
 .infographicBackground::before {

@@ -17,7 +17,7 @@ const gallery = (images) => {
 					name="description"
 					content="Galerija slika glumice Milice Janevski"
 				/>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/favicon.png" />
 			</Head>
 			<Region>
 				<Wrapper>
