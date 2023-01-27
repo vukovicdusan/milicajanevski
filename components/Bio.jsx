@@ -15,6 +15,10 @@ const Bio = (props) => {
 	return (
 		<>
 			<div className={styles.bioBackgroundLight}>
+				<ShapeDivider
+					background={"light"}
+					position={"top"}
+				></ShapeDivider>
 				<Wrapper>
 					<div className={styles.bioSwitcher}>
 						<div className={styles.bioStack}>
