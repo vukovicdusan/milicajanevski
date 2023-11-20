@@ -1,92 +1,109 @@
 .contactBackground {
-	background-color: var(--background-dark);
-	overflow: hidden;
-	color: var(--background-dark);
+  background-color: var(--background-dark);
+  overflow: hidden;
+  color: var(--background-dark);
 }
 .grid {
-	display: grid;
-	grid-template-columns: repeat(8, 12.5vw);
-	margin-inline: calc(50% - 50vw);
+  display: grid;
+  grid-template-columns: repeat(8, 12.5vw);
+  margin-inline: calc(50% - 50vw);
 }
 
 .light {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: var(--background-light);
-	grid-column: 1 / 4;
-	grid-row: 1;
-	padding-block: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-light);
+  grid-column: 1 / 4;
+  grid-row: 1;
+  padding-block: 4rem;
 }
 
 .socials {
-	composes: stack from "../styles/Stack.module.css";
+  composes: stack from "../styles/Stack.module.css";
 }
 
 .socials svg {
-	width: var(--s5);
-	height: var(--s5);
-	transition: fill 0.3s ease-in-out;
+  width: var(--s5);
+  height: var(--s5);
+  transition: fill 0.3s ease-in-out;
 }
 
 .socials svg:hover {
-	fill: var(--secondary);
+  fill: var(--secondary);
 }
 
 .contactStack {
-	composes: stack from "../styles/Stack.module.css";
-	grid-column: 3/6;
-	grid-row: 1;
-	padding-block: 4rem;
+  composes: stack from "../styles/Stack.module.css";
+  grid-column: 3/6;
+  grid-row: 1;
+  padding-block: 4rem;
 }
 
 .contactStack form {
-	background-color: var(--background-light);
-	padding: 3rem 2rem;
-	border-radius: 8px;
-	box-shadow: var(--box-shadow);
+  background-color: var(--background-light);
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
 }
 
 .center {
-	composes: center from "../styles/Center.module.css";
+  composes: center from "../styles/Center.module.css";
 }
 
 .inputWrapper {
-	position: relative;
-	display: flex;
-	flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .borderTitle {
-	position: absolute;
-	top: -12px;
-	right: 15px;
-	background-color: var(--background-light);
-	padding-inline: 0.5rem;
-	transition: all 0.2s ease;
+  position: absolute;
+  top: -12px;
+  right: 15px;
+  background-color: var(--background-light);
+  padding-inline: 0.5rem;
+  transition: all 0.2s ease;
 }
 
 input:focus + .borderTitle,
 textarea:focus + .borderTitle {
-	font-size: 0.8rem;
-	top: -6px;
+  font-size: 0.8rem;
+  top: -6px;
 }
 
 .success {
-	color: var(--secondary);
+  color: var(--secondary);
 }
 
 .error {
-	color: indianred;
+  color: indianred;
 }
 
 @media (max-width: 650px) {
-	.grid {
-		display: flex;
-		flex-direction: column-reverse;
-	}
+  .grid {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
-	.contactStack {
-		--stack-justify: center;
-	}
+  .contactStack {
+    --stack-justify: center;
+  }
+
+  .socials {
+    /* composes: stack from "../styles/Stack.module.css"; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .socials > * {
+    margin: 0;
+  }
+
+  .light {
+    padding-block: 1rem;
+  }
 }
